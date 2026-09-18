@@ -1,0 +1,364 @@
+:root {
+  /* Neutral */
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+
+  /* Red */
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+
+  /* Gradients */
+  --gradient-light: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+
+  --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Noto Sons";
+  src: url(./assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf);
+  font-weight: 100 900;
+}
+
+body {
+  min-height: 100vh;
+  padding-block: 20px;
+}
+
+body.dark {
+  background: var(--gradient-dark);
+}
+
+body.light {
+  background: var(--gradient-light);
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  width: 80%;
+  margin-block: 20px;
+  margin-inline: auto;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+/* Change the background-color in dark-mode to dark side */
+nav.dark-mode {
+  background-color: var(--neutral-800);
+}
+
+/* Change the background-color in light-mode to light side */
+nav.light-mode {
+  background-color: var(--neutral-0);
+}
+
+.d-flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Toggle your mode when click activation occured */
+.mode {
+  width: 40px;
+  height: 40px;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  padding: 10px;
+  background-color: var(--neutral-700);
+  background-position: center;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   Mode Toggle
+========================= */
+
+.mode {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 100%;
+
+  border: 2px solid transparent;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   Dark Mode
+========================= */
+
+.mode.dark {
+  background-image: url(./assets/images/icon-sun.svg);
+  background-color: var(--neutral-700);
+}
+
+.mode.dark:hover {
+  background-color: var(--neutral-600);
+}
+
+.mode.dark:focus {
+  border-color: var(--red-400);
+}
+
+/* =========================
+   Light Mode
+========================= */
+
+.mode.light {
+  background-image: url(./assets/images/icon-moon.svg);
+  background-color: var(--neutral-100);
+}
+
+.mode.light:hover {
+  background-color: var(--neutral-200);
+}
+
+.mode.light:focus {
+  border-color: var(--red-400);
+}
+#extension-list {
+  width: 80%;
+  margin: 30px auto 10px;
+  font-family: "Noto Sons", sans-serif;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  #extension-list .extension-list-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+#extension-list .extension-list-title.dark-title {
+  color: var(--neutral-900);
+}
+
+#extension-list ul {
+  gap: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  #extension-list ul {
+    width: 90%;
+  }
+}
+
+#extension-list ul li {
+  background-color: var(--neutral-800);
+  padding: 5px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  border: 2px solid transparent;
+}
+
+@media screen and (max-width: 767px) {
+  #extension-list ul li {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+#extension-list ul li.dark.active {
+  background-color: var(--red-400);
+  color: var(--neutral-900);
+}
+
+#extension-list ul li.dark:hover:not(.active) {
+  background-color: var(--neutral-700);
+}
+
+#extension-list ul li.dark:focus {
+  border-color: var(--red-400);
+}
+
+#extension-list ul li.light {
+  background-color: var(--neutral-0);
+  color: var(--neutral-900);
+}
+
+#extension-list ul li.light.active {
+  background-color: var(--red-400);
+  color: var(--neutral-0);
+}
+
+#extension-list ul li.light:hover:not(.active) {
+  background-color: var(--neutral-200);
+}
+
+#extension-list ul li.light:focus:not(.active) {
+  border-color: var(--red-700);
+}
+
+#extension-list .extensions-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+/* Tablet & Phones */
+@media screen and (max-width: 1100px) {
+  #extension-list {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #extension-list .extensions-list-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+#extension-list .extension-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 18px;
+  height: 175px;
+}
+
+#extension-list .extension-box.dark {
+  background-color: var(--neutral-800);
+  border: 1px solid var(--neutral-700);
+}
+
+#extension-list .extension-box.light {
+  background-color: var(--neutral-0);
+  /* border: 1px solid var(--neutral-200); */
+  box-shadow: 0px 0px 5px 1px var(--neutral-200);
+}
+
+#extension-list .extension-box.hide {
+  display: none;
+}
+
+#extension-list .extension-box .top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+#extension-list .extension-box .box-icon {
+  width: 50px;
+}
+
+#extension-list .extension-description h2 {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+#extension-list .extension-description h2.light {
+  color: var(--neutral-800);
+}
+
+#extension-list .extension-description h2.light {
+  color: var(--neutral-800);
+}
+
+#extension-list .extension-description p {
+  width: 80%;
+  font-size: 15px;
+  font-weight: 200;
+  color: var(--neutral-300);
+}
+
+@media screen and (max-width: 1100px) {
+  #extension-list .extension-description p {
+    width: 90%;
+  }
+}
+
+#extension-list .extension-description p.light {
+  color: var(--neutral-600);
+  font-weight: 400;
+}
+
+#extension-list .bottom {
+  display: flex;
+  justify-content: spac;
+}
+
+#extension-list .bottom .remove {
+  background-color: transparent;
+  padding: 7px 12px;
+  border: 1px solid var(--neutral-600);
+  border-radius: 15px;
+  color: var(--neutral-0);
+  cursor: pointer;
+}
+
+#extension-list .bottom .remove.light {
+  color: var(--neutral-800);
+  border-color: var(--neutral-300);
+}
+
+#extension-list .extension-box .is-active {
+  background-color: var(--red-400);
+  width: 30px;
+  height: 17px;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+#extension-list .extension-box .is-active:focus {
+  outline: 2px solid var(--red-500);
+  outline-offset: 2px;
+}
+
+#extension-list .extension-box .is-active .circle {
+  width: 13px;
+  height: 13px;
+  display: block;
+  border-radius: 50%;
+  background-color: var(--neutral-0);
+}
+
+#extension-list .extension-box .is-active.active {
+  background-color: var(--red-400);
+  justify-content: flex-end;
+}
+
+#extension-list .extension-box .is-active.inactive {
+  background-color: var(--neutral-600);
+  justify-content: flex-start;
+}
+
+#extension-list .extension-box .is-active.light.inactive {
+  background-color: var(--neutral-300);
+}
