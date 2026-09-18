@@ -2,7 +2,6 @@ import darkLogo from "../assets/images/logo.svg";
 import lightLogo from "../assets/images/logo-2.svg";
 
 export default function ExtensionBar({ mode, setMode }) {
-  console.log(darkLogo);
   function handleMode() {
     setMode((prevValue) => {
       return prevValue === "dark" ? "light" : "dark";
