@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Add this line exactly:
-  base: '/browser-extensions-manager-ui-main/',
+  base: '/Browswer-Extension-Manager-UI/',
 })
