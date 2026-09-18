@@ -17,6 +17,7 @@ export default function ExtensionBar({ mode, setMode }) {
       <img src={mode === "dark" ? darkLogo : lightLogo} alt="Extensions logo" />
 
       <button
+        type="button"
         className={`mode ${mode}`}
         onClick={handleMode}
         aria-label="Toggle color mode"
