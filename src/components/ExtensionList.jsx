@@ -41,7 +41,7 @@ export default function ExtensionList({ mode }) {
       <div className={`extension-box ${className} ${mode}`} key={index}>
         <div className="top">
           <img
-            src={`/Browswer-Extension-Manager-UI/src/${item.logo.slice(2)}`}
+            src={`/Browswer-Extension-Manager-UI/${item.logo.slice(2)}`}
             alt="Developer icon"
             className="box-icon"
           />
