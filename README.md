@@ -1,16 +1,99 @@
-# React + Vite
+# Browser Extension Manager UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive browser-extension dashboard built with **React** and **Vite**, based on the Frontend Mentor challenge.
 
-Currently, two official plugins are available:
+The goal of this project was to turn a static design into a reusable React interface with interactive filtering and theme switching.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+[Open the live demo →](https://atef7534.github.io/Browser-Extension-Manager-UI/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- View installed browser extensions
+- Filter extensions by **All**, **Active**, and **Inactive**
+- Enable and disable extensions
+- Remove extensions from the list
+- Toggle between light and dark themes
+- Responsive layout for different screen sizes
+- Reusable React components
+- Interactive states and accessible controls
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Built With
+
+- React
+- Vite
+- React Hooks
+- CSS
+- Git & GitHub
+- GitHub Pages
+
+## 🧠 What I Practiced
+
+This project was mainly about improving my React fundamentals and turning a design into a component-based application.
+
+I practiced:
+
+- Passing data and event handlers through props
+- Managing UI state with `useState`
+- Rendering lists with `map()`
+- Filtering data based on application state
+- Conditional rendering
+- Component composition
+- Theme switching
+- Responsive CSS
+- Deploying a Vite application to GitHub Pages
+
+## 📁 Project Structure
+
+```text
+src/
+├── assets/
+├── components/
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+## 🚀 Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/atef7534/Browser-Extension-Manager-UI.git
+cd Browser-Extension-Manager-UI
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+## 🎯 Challenge
+
+This project was built as part of a [Frontend Mentor](https://www.frontendmentor.io/) challenge.
+
+Frontend Mentor provided the design and requirements; the implementation, component structure, styling, interactions, and deployment were handled by me.
+
+## 👨‍💻 Author
+
+**Atif Yasser**
+
+[GitHub](https://github.com/atef7534) · [LinkedIn](https://www.linkedin.com/in/atif-yasser/)
+
+---
+
+If you have feedback about the UI, React structure, accessibility, or code quality, I'd be happy to hear it.
